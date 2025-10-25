@@ -1,0 +1,76 @@
+================================================================================
+ADVANCED ANNOTATION CONSISTENCY ANALYSIS REPORT
+================================================================================
+
+I. Multi-Rater Agreement Metrics
+--------------------------------------------------------------------------------
+Fleiss' Kappa (Tubule Type): 0.488
+Fleiss' Kappa (Atrophy Status): 0.563
+
+Interpretation:
+  < 0.00   : Poor agreement
+  0.00-0.20: Slight agreement
+  0.21-0.40: Fair agreement
+  0.41-0.60: Moderate agreement
+  0.61-0.80: Substantial agreement
+  0.81-1.00: Almost perfect agreement
+
+II. Annotator Reliability Scores
+--------------------------------------------------------------------------------
+Tubule Type:
+  Jiang Lei:
+    Mean agreement: 0.540 ± 0.043
+    Range: [0.480, 0.580]
+  Yu Xiaojuan:
+    Mean agreement: 0.600 ± 0.028
+    Range: [0.580, 0.640]
+  Wang Hui:
+    Mean agreement: 0.607 ± 0.052
+    Range: [0.560, 0.680]
+  Zhang Xu:
+    Mean agreement: 0.600 ± 0.086
+    Range: [0.480, 0.680]
+
+Atrophy Status:
+  Jiang Lei:
+    Mean agreement: 0.853 ± 0.062
+    Range: [0.800, 0.940]
+  Yu Xiaojuan:
+    Mean agreement: 0.867 ± 0.052
+    Range: [0.820, 0.940]
+  Wang Hui:
+    Mean agreement: 0.827 ± 0.009
+    Range: [0.820, 0.840]
+  Zhang Xu:
+    Mean agreement: 0.813 ± 0.009
+    Range: [0.800, 0.820]
+
+III. Most Difficult Samples (Highest Disagreement)
+--------------------------------------------------------------------------------
+Tubule Type - Top 5:
+  1. Image 1541: 4 different labels
+     Distribution: {'Uncertain(PT/DT)': 1, 'CD': 1, 'Uncertain(DT/CD)': 1, 'TAL': 1}
+  2. Image 1073: 3 different labels
+     Distribution: {'CD': 2, 'DT': 1, 'TAL': 1}
+  3. Image 1217: 3 different labels
+     Distribution: {'CD': 2, 'Uncertain(DT/CD)': 1, 'DT': 1}
+  4. Image 1299: 3 different labels
+     Distribution: {'Uncertain(DCT/PST)': 1, 'DT': 1, 'TAL': 2}
+  5. Image 1310: 3 different labels
+     Distribution: {'CD': 1, 'DT': 2, 'TAL': 1}
+
+Atrophy Status - Top 5:
+  1. Image 1073: 2 different labels
+     Distribution: {'No': 3, 'Atr': 1}
+  2. Image 1156: 2 different labels
+     Distribution: {'No': 2, 'Atr': 2}
+  3. Image 1209: 2 different labels
+     Distribution: {'No': 3, 'Atr': 1}
+  4. Image 1210: 2 different labels
+     Distribution: {'No': 3, 'Atr': 1}
+  5. Image 1217: 2 different labels
+     Distribution: {'Atr': 3, 'No': 1}
+
+================================================================================
+REPORT COMPLETED
+================================================================================

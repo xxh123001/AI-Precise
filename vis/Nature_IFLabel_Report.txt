@@ -1,0 +1,53 @@
+================================================================================
+ANNOTATION CONSISTENCY ANALYSIS WITH IF_LABEL
+================================================================================
+
+I. Basic Statistics
+--------------------------------------------------------------------------------
+Total samples: 50
+Complete tubule annotations (all 5): 50
+Complete atrophy annotations (humans only): 50
+
+II. IF_Label Agreement with Human Annotators (Tubule Type)
+--------------------------------------------------------------------------------
+Jiang Lei:
+  Agreement: 0.260
+  Cohen's Kappa: 0.156
+Yu Xiaojuan:
+  Agreement: 0.300
+  Cohen's Kappa: 0.104
+Wang Hui:
+  Agreement: 0.300
+  Cohen's Kappa: 0.131
+Zhang Xu:
+  Agreement: 0.280
+  Cohen's Kappa: 0.083
+
+Average Agreement (IF_Label vs Humans): 0.285
+Average Kappa (IF_Label vs Humans): 0.119
+
+III. Inter-Human Agreement (Tubule Type)
+--------------------------------------------------------------------------------
+Average Agreement (Among Humans): 0.587
+Average Kappa (Among Humans): 0.492
+
+IV. IF_Label Performance by Category
+--------------------------------------------------------------------------------
+Category             Precision    Recall       F1          
+--------------------------------------------------------------------------------
+CD                   0.250        0.161        0.193       
+DT                   0.172        0.726        0.260       
+PT                   0.464        0.312        0.373       
+TAL                  0.750        0.367        0.486       
+
+V. Key Findings
+--------------------------------------------------------------------------------
+Best performing category: TAL (F1=0.486)
+Worst performing category: CD (F1=0.193)
+
+Human annotators show HIGHER agreement among themselves than
+with IF_Label, suggesting room for model improvement.
+
+================================================================================
+REPORT COMPLETED
+================================================================================
