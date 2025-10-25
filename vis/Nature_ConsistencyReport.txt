@@ -1,0 +1,110 @@
+================================================================================
+Annotation Consistency Analysis Report
+================================================================================
+
+I. Basic Statistics
+--------------------------------------------------------------------------------
+Jiang Lei: Completed 50 images
+Yu Xiaojuan: Completed 50 images
+Wang Hui: Completed 50 images
+Zhang Xu: Completed 50 images
+
+Common images annotated by all 4 annotators:
+  - Tubule type: 50 images
+  - Atrophy status: 50 images
+
+II. Tubule Type Annotation Consistency
+--------------------------------------------------------------------------------
+Average agreement rate: 0.587 (58.7%)
+Average Kappa coefficient: 0.492
+
+Kappa coefficient interpretation:
+  < 0.00   : No agreement
+  0.00-0.20: Slight agreement
+  0.21-0.40: Fair agreement
+  0.41-0.60: Moderate agreement
+  0.61-0.80: Substantial agreement
+  0.81-1.00: Almost perfect agreement
+
+Pairwise annotator consistency:
+  Jiang Lei vs Yu Xiaojuan: Agreement=0.580, Kappa=0.480
+  Jiang Lei vs Wang Hui: Agreement=0.560, Kappa=0.464
+  Jiang Lei vs Zhang Xu: Agreement=0.480, Kappa=0.375
+  Yu Xiaojuan vs Wang Hui: Agreement=0.580, Kappa=0.480
+  Yu Xiaojuan vs Zhang Xu: Agreement=0.640, Kappa=0.545
+  Wang Hui vs Zhang Xu: Agreement=0.680, Kappa=0.608
+
+III. Atrophy Status Annotation Consistency
+--------------------------------------------------------------------------------
+Average agreement rate: 0.840 (84.0%)
+Average Kappa coefficient: 0.578
+
+Pairwise annotator consistency:
+  Jiang Lei vs Yu Xiaojuan: Agreement=0.940, Kappa=0.782
+  Jiang Lei vs Wang Hui: Agreement=0.820, Kappa=0.531
+  Jiang Lei vs Zhang Xu: Agreement=0.800, Kappa=0.499
+  Yu Xiaojuan vs Wang Hui: Agreement=0.840, Kappa=0.551
+  Yu Xiaojuan vs Zhang Xu: Agreement=0.820, Kappa=0.518
+  Wang Hui vs Zhang Xu: Agreement=0.820, Kappa=0.585
+
+IV. Annotation Category Distribution
+--------------------------------------------------------------------------------
+Tubule type distribution:
+
+  Jiang Lei:
+    CD: 18 (36.0%)
+    PT: 11 (22.0%)
+    TAL: 8 (16.0%)
+    Uncertain(PT/DT): 6 (12.0%)
+    Uncertain(DT/CD): 5 (10.0%)
+    Uncertain(DCT/PST): 1 (2.0%)
+    DT: 1 (2.0%)
+
+  Yu Xiaojuan:
+    TAL: 14 (28.0%)
+    CD: 13 (26.0%)
+    DT: 10 (20.0%)
+    PT: 10 (20.0%)
+    Uncertain(DT/CD): 2 (4.0%)
+    Uncertain(PT/DT): 1 (2.0%)
+
+  Wang Hui:
+    CD: 12 (24.0%)
+    PT: 11 (22.0%)
+    DT: 9 (18.0%)
+    TAL: 8 (16.0%)
+    Uncertain(DT/CD): 6 (12.0%)
+    Uncertain(DCT/PST): 3 (6.0%)
+    Uncertain(PT/DT): 1 (2.0%)
+
+  Zhang Xu:
+    TAL: 13 (26.0%)
+    DT: 11 (22.0%)
+    CD: 10 (20.0%)
+    PT: 9 (18.0%)
+    Uncertain(DT/CD): 5 (10.0%)
+    Uncertain(DCT/PST): 2 (4.0%)
+
+Atrophy status distribution:
+
+  Jiang Lei:
+    No: 41 (82.0%)
+    Atr: 7 (14.0%)
+    Uncertain: 2 (4.0%)
+
+  Yu Xiaojuan:
+    No: 43 (86.0%)
+    Atr: 7 (14.0%)
+
+  Wang Hui:
+    No: 35 (70.0%)
+    Atr: 15 (30.0%)
+
+  Zhang Xu:
+    No: 34 (68.0%)
+    Atr: 15 (30.0%)
+    Uncertain: 1 (2.0%)
+
+================================================================================
+Report Generation Completed
+================================================================================
