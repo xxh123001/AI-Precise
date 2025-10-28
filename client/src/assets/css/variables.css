@@ -1,0 +1,269 @@
+/* 全局CSS变量 - 柔和的绿蓝配色方案 */
+:root {
+  /* 主要渐变配色 - 更柔和的版本 */
+  --primary-gradient: linear-gradient(315deg, #6fcf97 25%, #74a9ff);
+  --primary-gradient-reverse: linear-gradient(135deg, #74a9ff 25%, #6fcf97);
+  --primary-gradient-soft: linear-gradient(315deg, rgba(111, 207, 151, 0.1) 25%, rgba(116, 169, 255, 0.1));
+  
+  /* 主色调 - 降低饱和度 */
+  --primary-green: #6fcf97;
+  --primary-blue: #74a9ff;
+  --primary-green-light: #8dd8ad;
+  --primary-blue-light: #8db5ff;
+  --primary-green-dark: #5cb380;
+  --primary-blue-dark: #5a95ff;
+  
+  /* 渐变变体 */
+  --card-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  --hover-gradient: linear-gradient(315deg, #8dd8ad 25%, #8db5ff);
+  --shadow-gradient: linear-gradient(315deg, rgba(111, 207, 151, 0.2) 25%, rgba(116, 169, 255, 0.2));
+  
+  /* 中性色调 */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border-color: #e2e8f0;
+  --white: #ffffff;
+  
+  /* 状态色调（基于主色调调整） */
+  --success-color: #42d392;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #647eff;
+  
+  /* 阴影 */
+  --shadow-sm: 0 2px 8px rgba(66, 211, 146, 0.08);
+  --shadow-md: 0 4px 16px rgba(66, 211, 146, 0.12);
+  --shadow-lg: 0 8px 32px rgba(66, 211, 146, 0.16);
+  --shadow-xl: 0 16px 48px rgba(66, 211, 146, 0.2);
+  
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* 过渡效果 */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* 全局辅助类 */
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.gradient-bg {
+  background: var(--primary-gradient);
+}
+
+.gradient-bg-soft {
+  background: var(--primary-gradient-soft);
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale {
+  transition: transform var(--transition-normal);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-lift {
+  transition: all var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 动画 */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(111, 207, 151, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(116, 169, 255, 0.6); }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* 隐藏滚动条辅助类 */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit浏览器 (Chrome, Safari, Opera) */
+}
+
+/* 显示滚动条辅助类（用于覆盖全局隐藏设置） */
+.show-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  -ms-overflow-style: scrollbar; /* IE and Edge */
+}
+
+.show-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  height: 8px;
+}
+
+.show-scrollbar::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-gradient);
+}
+
+/* =================== 暗黑模式适配 =================== */
+[data-theme="dark"] {
+  /* 主要渐变配色 - 暗黑模式下更柔和 */
+  --primary-gradient: linear-gradient(315deg, #52c788 25%, #6366f1);
+  --primary-gradient-reverse: linear-gradient(135deg, #6366f1 25%, #52c788);
+  --primary-gradient-soft: linear-gradient(315deg, rgba(82, 199, 136, 0.15) 25%, rgba(99, 102, 241, 0.15));
+  
+  /* 主色调 - 暗黑模式优化 */
+  --primary-green: #52c788;
+  --primary-blue: #6366f1;
+  --primary-green-light: #6dd498;
+  --primary-blue-light: #818cf8;
+  --primary-green-dark: #45b574;
+  --primary-blue-dark: #4f46e5;
+  
+  /* 渐变变体 */
+  --card-gradient: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.85));
+  --hover-gradient: linear-gradient(315deg, #6dd498 25%, #818cf8);
+  --shadow-gradient: linear-gradient(315deg, rgba(82, 199, 136, 0.2) 25%, rgba(99, 102, 241, 0.2));
+  
+  /* 暗黑模式背景色 */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --border-color: #334155;
+  --white: #1e293b;
+  
+  /* 状态色调 - 暗黑模式优化 */
+  --success-color: #52c788;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #6366f1;
+  
+  /* 阴影 - 暗黑模式下更深 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+}
+
+/* 自动暗黑模式检测 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 主要渐变配色 - 暗黑模式下更柔和 */
+    --primary-gradient: linear-gradient(315deg, #52c788 25%, #6366f1);
+    --primary-gradient-reverse: linear-gradient(135deg, #6366f1 25%, #52c788);
+    --primary-gradient-soft: linear-gradient(315deg, rgba(82, 199, 136, 0.15) 25%, rgba(99, 102, 241, 0.15));
+    
+    /* 主色调 - 暗黑模式优化 */
+    --primary-green: #52c788;
+    --primary-blue: #6366f1;
+    --primary-green-light: #6dd498;
+    --primary-blue-light: #818cf8;
+    --primary-green-dark: #45b574;
+    --primary-blue-dark: #4f46e5;
+    
+    /* 渐变变体 */
+    --card-gradient: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.85));
+    --hover-gradient: linear-gradient(315deg, #6dd498 25%, #818cf8);
+    --shadow-gradient: linear-gradient(315deg, rgba(82, 199, 136, 0.2) 25%, rgba(99, 102, 241, 0.2));
+    
+    /* 暗黑模式背景色 */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --border-color: #334155;
+    --white: #1e293b;
+    
+    /* 状态色调 - 暗黑模式优化 */
+    --success-color: #52c788;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --info-color: #6366f1;
+    
+    /* 阴影 - 暗黑模式下更深 */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* 暗黑模式下的动画调整 */
+@media (prefers-color-scheme: dark) {
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(82, 199, 136, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+  }
+}
+
+[data-theme="dark"] {
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(82, 199, 136, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+  }
+}

@@ -1,0 +1,116 @@
+# 图片文件
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.svg
+*.ico
+images/
+uploads/
+output/
+
+# 配置文件
+*.env
+.env.*
+config.json
+*.conf
+*.ini
+
+# 数据库配置
+*.sql
+backup*.sql
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+package-lock.json
+
+# 构建输出
+client/dist/
+client/build/
+*.min.js
+*.min.css
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.cursor/
+
+# 日志文件
+*.log
+logs/
+*.txt
+*.csv
+!requirements.txt
+!README.md
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.cache
+.cache/
+
+# 压缩文件
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# 证书和密钥
+*.pem
+*.key
+*.crt
+*.p12
+
+# Redis
+dump.rdb
+
+# 其他
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.pid
+
