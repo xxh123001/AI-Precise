@@ -83,6 +83,9 @@ logs/
 *.csv
 !requirements.txt
 !README.md
+*.pdf
+*.html
+!index.html
 
 # 临时文件
 *.tmp
@@ -113,4 +116,6 @@ dump.rdb
 htmlcov/
 .tox/
 *.pid
+
+
 
